@@ -1,0 +1,33 @@
+package_parameter "ProjectTemplate.Agent.Container" {
+    feed = "docker-hub"
+    package_id = "octopussolutionsengineering/weather-agent"
+}
+
+package_parameter "ProjectTemplate.SBOM" {
+    feed = "octopus-server-built-in"
+    package_id = "weather-agent.sbom"
+}
+
+parameter "ProjectTemplate.Docker.Account" {
+    value = "Shared.Docker.Account"
+}
+
+parameter "ProjectTemplate.TargetTags" {
+    value = "demo-k8s-cluster"
+}
+
+parameter "ProjectTemplate.Git.AuthToken" {
+    value = "#{Shared.GitHub.Token}"
+}
+
+parameter "ProjectTemplate.Worker.Pool" {
+    value = "WorkerPools-24"
+}
+
+parameter "ProjectTemplate.ExecutionContainer.Feed" {
+    value = "Feeds-1028"
+}
+
+parameter "ProjectTemplate.ServiceAccount.ClientId" {
+    value = "86458e15-f474-43e6-a280-9e51f1f8e068"
+}
